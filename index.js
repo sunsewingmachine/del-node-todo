@@ -15,7 +15,7 @@ let todos = [];
 // http://localhost:3000/todos?titile=first&description=firstitem
 // create a new todo item
 app.get('/todos', (req, res) => {
-  // const {title, description} = req.query; // used for GET method
+  // const {title, description} = req.query; // used for GET methodcls
   const {title, description} = req.body;
   const newTodo = {
     id: todos.length + 1,
