@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
 // sample in-memory storage for todo items
 let todos = [];
 
-// http://localhost:3000/todos?titile=first&description=firstitem
+// http://localhost:3000/todos
 // create a new todo item
-app.get('/todos', (req, res) => {
+app.post('/todos', (req, res) => {
   // const {title, description} = req.query; // used for GET methodcls
   const {title, description} = req.body;
   const newTodo = {
@@ -25,6 +25,13 @@ app.get('/todos', (req, res) => {
   todos.push(newTodo);
   console.log(todos);
   res.status(201).json(newTodo);
+});
+
+
+// gets all todo items
+app.get('/todos-get', (req, res) => {
+  console.log(todos);
+  res.status(201).json(todos);
 });
 
 app.listen(port, () => {
