@@ -23,8 +23,8 @@ app.post('/todos', (req, res) => {
     description
   }
 
-  
-  // push changes
+
+  // push changes 
   todos.push(newTodo);
   console.log(todos);
   res.status(201).json(newTodo);
