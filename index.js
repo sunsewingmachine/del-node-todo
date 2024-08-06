@@ -1,4 +1,3 @@
-
 // index.js
 const express = require('express');
 const app = express();
@@ -9,12 +8,13 @@ app.get('/', (req, res) => {
   res.send('Bismillah, 123!');
 });
 
-// sample in-memory storage for todo items
+// sample in-memory storage for todo items2
 let todos = [];
 
 // http://localhost:3000/todos
 // create a new todo item
 app.post('/todos', (req, res) => {
+
   // const {title, description} = req.query; // used for GET methodcls
   const {title, description} = req.body;
   const newTodo = {
