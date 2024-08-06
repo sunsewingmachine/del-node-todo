@@ -23,8 +23,7 @@ app.post('/todos', (req, res) => {
     description
   }
 
-
-  // push changes 
+  // push changes afer gitdoc disabled 1
   todos.push(newTodo);
   console.log(todos);
   res.status(201).json(newTodo);
